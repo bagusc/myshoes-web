@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Replace with the path to your CSS file -->
+  </head>
+  <body class="bg-gray-100">
+    <div
+      class="container mx-auto max-w-sm mt-16 p-6 bg-white rounded-lg shadow-md"
+    >
+      <h2 class="text-2xl font-semibold mb-6 text-center">Welcome</h2>
+      <form action="/login" method="POST">
+        <div class="mb-4">
+          <label for="username" class="block text-sm font-semibold mb-2"
+            >Username:</label
+          >
+          <input
+            type="text"
+            name="username"
+            id="username"
+            class="border p-2 w-full"
+            required
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="password" class="block text-sm font-semibold mb-2"
+            >Password:</label
+          >
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="border p-2 w-full"
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300 ease-in-out w-full"
+        >
+          Log In
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

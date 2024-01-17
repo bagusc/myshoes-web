@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <div class="container mx-auto max-w-screen-lg">
+      <!-- Adjust the max-width as needed -->
+      <button class="bg-blue-500 text-white px-4 py-2 rounded mt-10 mb-5">
+        <a href="/add">Add Products</a>
+      </button>
+      <table border="1" class="min-w-full bg-white border border-gray-300">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 border-b">Image</th>
+            <th class="py-2 px-4 border-b">Product Name</th>
+            <th class="py-2 px-4 border-b">Brand</th>
+            <th class="py-2 px-4 border-b">Price</th>
+            <th class="py-2 px-4 border-b">Stock</th>
+            <th class="py-2 px-4 border-b">Rating</th>
+            <th class="py-2 px-4 border-b">Description</th>
+            <th class="py-2 px-4 border-b">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% apiData.forEach(item => { %>
+          <tr>
+            <td class="py-2 px-4 border-b">
+              <img src="<%= item.image %>" width="100px" height="100px" />
+            </td>
+            <td class="py-2 px-4 border-b"><%= item.name %></td>
+            <td class="py-2 px-4 border-b"><%= item.brand %></td>
+            <td class="py-2 px-4 border-b"><%= item.price %></td>
+            <td class="py-2 px-4 border-b"><%= item.stock %></td>
+            <td class="py-2 px-4 border-b"><%= item.rating %></td>
+            <td class="py-2 px-4 border-b"><%= item.description %></td>
+            <td class="py-2 px-4 border-b">
+              <a
+                href="/edit/<%= item._id %>"
+                class="text-blue-500 hover:underline hover:text-blue-700 transition duration-300 ease-in-out"
+                >Edit</a
+              >
+              <a
+                href="/delete/<%= item._id %>"
+                class="text-red-500 hover:underline hover:text-red-700 transition duration-300 ease-in-out"
+                >Delete</a
+              >
+            </td>
+          </tr>
+
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

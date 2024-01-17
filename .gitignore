@@ -1,0 +1,55 @@
+# Modul Node.js
+node_modules/
+
+# Berkas log dan data sementara
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Berkas konfigurasi
+.env
+
+# Berkas yang dihasilkan oleh alat pengembangan
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Berkas yang dihasilkan oleh alat pengujian
+coverage
+lib-cov
+
+# Berkas konfigurasi untuk alat pengujian
+.nyc_output
+
+# Berkas yang dihasilkan oleh alat pengembangan
+.build/
+
+# Berkas yang dihasilkan oleh alat analisis kode
+.lerna-debug.log
+
+# Berkas yang dihasilkan oleh editor teks
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Berkas sistem operasi
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Berkas log Windows
+*.log
+
+# Berkas yang dihasilkan oleh alat pengujian
+__test__
+
+# Berkas yang dihasilkan oleh alat pustaka pengujian
+coverage/
+
+.vercel
